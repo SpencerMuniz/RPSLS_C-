@@ -8,11 +8,13 @@
             bool playAgain = true;
             String player;
             String computer;
+            String answer;
 
             while(playAgain)
             {
                 player = "";
                 computer = "";
+                answer = "";
                 while (player != "Rock" && player != "Paper" && player != "Scissors" && player != "Lizard" && player != "Spock")
                 {
                 Console.Write("Enter Rock, Paper, Scissors, Lizard, or Spock: ");
@@ -154,13 +156,23 @@
                         break;
                 }
 
-                Console.WriteLine("Would you like to play again?");
+                Console.WriteLine("Would you like to play again (Y/N)? ");
+                answer = Console.ReadLine();
+                answer = answer.ToUpper();
+                if (answer == "Y")
+                {
+                    playAgain = true;
+                }
+                else
+                {
+                    playAgain = false;
+                }
 
             }
 
             Game game = new Game();
             game.Run();
-
+            Console.WriteLine("Thanks for playing!");
             Console.ReadKey();
         }
     }
