@@ -16,7 +16,7 @@ namespace RockPaperScissorsLizardRock
         public void ChooseGesture()
         {
             Console.WriteLine(this.name, "select gesture: ");
-            Console.WriteLine("ROCK, PAPER, SCISSORS, LIZARD, SPOCK");
+            Console.WriteLine("ROCK, PAPER, SCISSORS, LIZARD, SPOCK ");
         }
     }
 }
