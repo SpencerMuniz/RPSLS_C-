@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardRock
 {
-    class Robot: Player
+    public class Player
     {
-       public Robot(string name, int score)
+        public string name;
+        public int score;
+        public Player()
         {
-            this.name = name;
-            this.score = score;
-           
+
         }
+        public void ScoreCounter()
+        {
+            score += 1;
+        }
+        
     }
 }
